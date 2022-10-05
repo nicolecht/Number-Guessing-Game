@@ -1,20 +1,28 @@
 const prompt = require("prompt-sync")({ sigint: true });
 
-const name = prompt("what is your name?");
-console.log(`hey there ${name}`);
-
-// Random number from 1 - 100
-let numberInMind = Math.floor(Math.random() * 100) + 1;
-
-// This variable is used to determine if the app should continue prompting the user for input
-let foundCorrectNumber = false;
-
-while (!foundCorrectNumber) {
-  // Step 1: Get user input (don't forget that the input is a string)
-  const userNumber = prompt("What is the secret number?");
-  console.log(`Your number of ${userNumber} is wrong`);
-  // Step 2: Compare the guess to the secret answer and
-  // let the user know the feedback (too large, too small, correct).
-}
+// const name = prompt("what is your name?");
+// console.log(`hey there ${name}`);
 
 // Bonus Point: prompt user and provide option for user to start a new game after winning
+
+const results = () => {
+  // Generate random number
+  let numberInMind = (Math.floor(Math.random() * 10) + 1).toString();
+  let foundCorrectNumber = false;
+
+  while (!foundCorrectNumber) {
+    const userNumber = prompt("What is the secret number (1 to 10)?");
+
+    if (numberInMind > userNumber) {
+      console.log(`Your number of ${userNumber} is too small`);
+    } else if (numberInMind < userNumber) {
+      display = "too big";
+      console.log(`Your number of ${userNumber} is too big`);
+    } else {
+      foundCorrectNumber = true;
+      console.log(`Your number of ${userNumber} is correct. You win!`);
+    }
+  }
+};
+
+results();
