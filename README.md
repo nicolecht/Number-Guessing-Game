@@ -1,6 +1,6 @@
 # Number-Guessing-Game
 
-A project under TalentLab's <em>Foundation Certificate of Software Engineering</em> programme
+A project under TalentLab's <em>Foundation Certificate of Software Engineering</em> programme.
 
 This project requires us to code a simple Guess-The-Number game.
 
